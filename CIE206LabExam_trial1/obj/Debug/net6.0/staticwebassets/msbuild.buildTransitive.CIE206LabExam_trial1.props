@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\buildMultiTargeting\CIE206LabExam_trial1.props" />
+</Project>

@@ -1,0 +1,31 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+<div class="col-6">
+<table class="table">
+    <thead>
+    <tr>
+        <th>PetId</th>
+        <th>PetName</th>
+        <th>Age</th>
+        <th>OwnerName</th>
+        <th>VetName</th>
+    </tr>
+        </thead>
+    @foreach(var pet in Model.myPets)
+    {
+        <tr>
+            <td>@pet.id</td>
+            <td>@pet.name</td>
+            <td>@pet.year</td>
+            <td>@pet.ownername</td>
+            <td>@pet.vetname</td>
+        </tr>
+    }
+    
+</table>
+
+<a class="btn btn-primary" asp-page="/AddPet" >Add New Pet</a>
+</div>

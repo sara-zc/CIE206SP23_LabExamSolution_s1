@@ -1,0 +1,22 @@
+﻿@page
+@model AddPetModel
+@{
+    ViewData["Title"] = "Second Page";
+}
+
+<h1> Add New Pet</h1>
+
+<form method="post" class="col-3">
+    <div class="form-group">
+    <label >Pet Name</label>
+    <input class="form-control" type="text" asp-for="@Model.pet.name" />
+    <span class="text-danger" asp-validation-for="@Model.pet.name"></span>
+    </div>
+
+    <label class="form-label">Birth Year</label>
+    <br />
+    <input class="form-control" type="number" asp-for="@Model.pet.year" />
+    <span class="text-danger" asp-validation-for="@Model.pet.year"></span>
+    <br />
+    <button type="submit" class="btn btn-primary">Add</button>
+</form>
